@@ -1,3 +1,15 @@
+### But Frist Enter the following as one command ###
+
+wget https://raw.githubusercontent.com/islammohamed20/avs-device-sdk/master/tools/Install/setup.sh \
+
+wget https://raw.githubusercontent.com/islammohamed20/avs-device-sdk/master/tools/Install/genConfig.sh \
+
+wget https://raw.githubusercontent.com/islammohamed20/avs-device-sdk/master/tools/Install/pi.sh
+
+### Next, run the install script ###
+
+sudo bash setup.sh config.json [-s 123456]
+
 ### What is the Alexa Voice Service (AVS)?
 
 The Alexa Voice Service (AVS) enables developers to integrate Alexa directly into their products, bringing the convenience of voice control to any connected device. AVS provides developers with access to a suite of resources to build Alexa-enabled products, including APIs, hardware development kits, software development kits, and documentation.
