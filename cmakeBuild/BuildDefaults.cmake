@@ -37,9 +37,6 @@ include_once(CodeCoverage/CodeCoverage)
 # Setup package requirement variables.
 include_once(PackageConfigs)
 
-# Setup Bluetooth variables.
-include_once(Bluetooth)
-
 # Allow for overridden library names
 include_once(DefaultLibNames)
 
