@@ -256,9 +256,6 @@ private:
     /// The @c MediaPlayer used by @c NotificationsCapabilityAgent.
     std::shared_ptr<avsCommon::utils::mediaPlayer::MediaPlayerInterface> m_notificationsMediaPlayer;
 
-    /// The @c MediaPlayer used by @c Bluetooth.
-    std::shared_ptr<avsCommon::utils::mediaPlayer::MediaPlayerInterface> m_bluetoothMediaPlayer;
-
     /// The @c MediaPlayer used by @c SystemSoundPlayer.
     std::shared_ptr<avsCommon::utils::mediaPlayer::MediaPlayerInterface> m_systemSoundMediaPlayer;
 
@@ -293,11 +290,6 @@ private:
 #if defined(ANDROID_MEDIA_PLAYER) || defined(ANDROID_MICROPHONE)
     /// The android OpenSL ES engine used to create media players and microphone.
     std::shared_ptr<applicationUtilities::androidUtilities::AndroidSLESEngine> m_openSlEngine;
-#endif
-
-#ifdef BLUETOOTH_BLUEZ_PULSEAUDIO_OVERRIDE_ENDPOINTS
-    /// Initializer object to reload PulseAudio Bluetooth modules.
-    std::shared_ptr<bluetoothImplementations::blueZ::PulseAudioBluetoothInitializer> m_pulseAudioInitializer;
 #endif
 
 #ifdef POWER_CONTROLLER
