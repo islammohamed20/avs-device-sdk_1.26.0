@@ -1,3 +1,22 @@
+### Set Up the AVS Device SDK on Raspberry Pi from Main Source(alexa/avs-device-sdk) ###
+
+sudo apt-get -y install \
+git gcc cmake build-essential libsqlite3-dev libcurl4-openssl-dev libfaad-dev \
+libssl-dev libsoup2.4-dev libgcrypt20-dev libgstreamer-plugins-bad1.0-dev \
+libnghttp2-dev nghttp2 gstreamer1.0-plugins-good libasound2-dev doxygen
+
+wget -c http://www.portaudio.com/archives/pa_stable_v190600_20161030.tgz
+tar zxf pa_stable_v190600_20161030.tgz
+cd portaudio
+./configure --without-jack
+make
+
+wget https://github.com/curl/curl/releases/download/curl-7_67_0/curl-7.67.0.tar.gz
+tar xzf curl-7.67.0.tar.gz  
+cd curl-7.67.0
+./configure --with-nghttp2 --prefix=/home/pi/sdk-folder/third-party/curl-7.67.0 --with-ssl
+make
+
 ### But Frist Enter the following as one command ###
 
 wget https://raw.githubusercontent.com/islammohamed20/avs-device-sdk/master/tools/Install/setup.sh \
